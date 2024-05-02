@@ -1,0 +1,38 @@
+//Create a PHP web form to submit the name and age of an employee.
+
+DOCTYPE html> 
+> 
+> 
+<title>Employee Information Form</title> 
+</head> 
+> 
+<h2>Employee Information Form</h2> 
+<form method="post" 
+action="process_form.php"> 
+<label for="name">Name:</label> 
+<input type="text" name="name" 
+id="name" required><br><br> 
+
+<label for="age">Age:</label> 
+<input type="number" name="age" 
+id="age" required><br><br> 
+
+<input type="submit" value="Submit"> 
+</form> 
+</body> 
+</html> 
+
+php 
+if ($_SERVER['REQUEST_METHOD'] == 
+'POST') { 
+// Get the submitted values 
+$name = $_POST['name']; 
+$age = $_POST['age']; 
+
+// Do something with the submitted data 
+// For example, you could save it to a database 
+// or display it on the screen 
+echo "Employee Name: " . $name . "<br>"; 
+echo "Employee Age: " . $age . "<br>"; 
+} 
+?> 
